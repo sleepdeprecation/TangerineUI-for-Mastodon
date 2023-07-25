@@ -5,6 +5,7 @@
     https://github.com/nileane/TangerineUI-for-Mastodon/
 
     by @nileane@nileane.fr
+    with minor modifications by @sleep@fslurs.gay
 
     Compatible with: Mastodon v4.2.1 ✅
 */
@@ -232,9 +233,8 @@ body.layout-single-column  {
     background: transparent;
 }
 
-/* Round avatars */
 .layout-single-column .account__avatar img {
-    border-radius: 50%;
+    border-radius: 7px;
 }
 
 /* Rordered layout */
@@ -1322,12 +1322,18 @@ body.layout-single-column  {
     color: #ffb609;
 }
 .layout-single-column .status__prepend {
+    font-size: 1em;
+    font-weight: normal;
     padding-top: 2px;
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
     height: 25px;
     color: var(--color-content-fg);
+
+    strong {
+        font-weight: bold;
+    }
 }
 .layout-single-column .status__prepend-icon-wrapper {
     width: 56px;
@@ -2277,7 +2283,7 @@ body.layout-single-column  {
     border: 0;
 }
 .layout-single-column .account__header__bar .avatar .account__avatar {
-    border-radius: 50%;
+    border-radius: 7px;
     border-width: 5px;
     width: 100px !important;
     height: 100px !important;
@@ -2511,6 +2517,7 @@ body.layout-single-column  {
 .layout-single-column .hashtag-header__header h1 {
     color: var(--color-content-fg);
 }
+
 .layout-single-column .hashtag-header .hashtag-header__header + div {
     color: var(--color-content-fg);
     font-size: 85%;
@@ -2519,10 +2526,15 @@ body.layout-single-column  {
     width: max-content;
 }
 
-@media screen and (min-width:890px) and (max-width:1174px) {
-    .layout-single-column .hashtag-header {
-        margin-top: 15px;
-    }
+.layout-single-column .account-card__title__avatar .account__avatar {
+    border: 0;
+    border-radius: 7px;
+    overflow: visible;
+}
+.layout-single-column .account-card__title__avatar img {
+    border: 0;
+    border-radius: 7px;
+    box-shadow: 0 0 0 3px var(--color-content-bg);
 }
 @media screen and (min-width:890px) {
     .layout-single-column .hashtag-header {
@@ -2530,6 +2542,7 @@ body.layout-single-column  {
         border-top-right-radius: 8px;
         border-left: 1px solid var(--color-lines);
         border-right: 1px solid var(--color-lines);
+        margin-top: 15px;
     }
     .layout-single-column .hashtag-header .hashtag-header__header button {
         transform: translate(0, 8px);
@@ -2563,12 +2576,12 @@ body.layout-single-column  {
 }
 .layout-single-column .account-card__title__avatar .account__avatar {
     border: 0;
-    border-radius: 50%;
+    border-radius: 7px;
     overflow: visible;
 }
 .layout-single-column .account-card__title__avatar img {
     border: 0;
-    border-radius: 50%;
+    border-radius: 7px;
     box-shadow: 0 0 0 3px var(--color-content-bg);
 }
 .layout-single-column .account-card__title .display-name bdi,
@@ -4006,4 +4019,61 @@ body.layout-single-column  {
 .layout-single-column .getting-started__trends h4, /* Hide Trending header in sidebar */
 .layout-single-column .account__header__bio .account__header__fields > dl:first-child /* Hide "Joined" field on profiles */ {
     display: none;
+}
+
+
+/* Extra stuff from @sleep that doesn't fit elsewhere */
+.status--in-thread .attachment-list, .status--in-thread .audio-player, .status--in-thread .media-gallery, .status--in-thread .picture-in-picture-placeholder, .status--in-thread .status-card, .status--in-thread .status__action-bar, .status--in-thread .status__content, .status--in-thread .video-player {
+    width: 100%;
+}
+
+img.logo {
+    display: none !important;
+}
+
+.account--panel {
+    background: var(--color-accent-bg);
+    border: 1px solid var(--color-content-secondary-separator);
+    border-radius: 5px;
+}
+
+.column-back-button--slim {
+    display: none;
+}
+
+.follow_requests-unlocked_explanation {
+    border-bottom-color: var(--color-content-secondary-separator);
+}
+
+.account-memorial-banner, .follow-request-banner, .moved-account-banner {
+    background-color: var(--color-accent-bg);
+}
+
+.account-memorial-banner__message, .follow-request-banner__message, .moved-account-banner__message {
+    color: var(--color-content-bold);
+}
+
+.limited-account-hint p, .timeline-hint {
+    color: var(--color-content-fg-muted);
+}
+
+.display-name__html {
+    font-weight: bold;
+}
+
+.reply-indicator__content a, .status__content a, .account-card__bio a {
+    color: var(--color-accent);
+}
+
+.account-card__title .display-name bdi, .account-card__counters__item {
+    color: var(--color-content-fg);
+}
+
+.account-role, .simple_form .not_recommended, .simple_form .recommended {
+    color: var(--color-content-fg-muted);
+    background-color: var(--color-accent-bg);
+}
+
+.detailed-status .status__content p {
+    font-size: 1.2em;
 }
