@@ -1,0 +1,55 @@
+/* sleep's extra custom stuff for rn */
+.status--in-thread .attachment-list, .status--in-thread .audio-player, .status--in-thread .media-gallery, .status--in-thread .picture-in-picture-placeholder, .status--in-thread .status-card, .status--in-thread .status__action-bar, .status--in-thread .status__content, .status--in-thread .video-player {
+    width: 100%;
+}
+
+img.logo {
+    display: none !important;
+}
+
+.account--panel {
+    background: var(--color-accent-bg);
+    border: 1px solid var(--color-content-secondary-separator);
+    border-radius: 5px;
+}
+
+.column-back-button--slim {
+    display: none;
+}
+
+.follow_requests-unlocked_explanation {
+    border-bottom-color: var(--color-content-secondary-separator);
+}
+
+.account-memorial-banner, .follow-request-banner, .moved-account-banner {
+    background-color: var(--color-accent-bg);
+}
+
+.account-memorial-banner__message, .follow-request-banner__message, .moved-account-banner__message {
+    color: var(--color-content-bold);
+}
+
+.limited-account-hint p, .timeline-hint {
+    color: var(--color-content-fg-muted);
+}
+
+.display-name__html {
+    font-weight: bold;
+}
+
+.reply-indicator__content a, .status__content a, .account-card__bio a {
+    color: var(--color-accent);
+}
+
+.account-card__title .display-name bdi, .account-card__counters__item {
+    color: var(--color-content-fg);
+}
+
+.account-role, .simple_form .not_recommended, .simple_form .recommended {
+    color: var(--color-content-fg-muted);
+    background-color: var(--color-accent-bg);
+}
+
+.detailed-status .status__content p {
+    font-size: 1.2em;
+}
